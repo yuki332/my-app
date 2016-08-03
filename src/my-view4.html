@@ -1,25 +1,54 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
-
-<dom-module id="my-view4">
+<link rel="import" href="../bower_components/paper-input/paper-textarea.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-toast/paper-toast.html">
+<dom-module id="my-journal-write">
 
   <template>
 
-    <style>
+    <style is="custom-style">
       :host {
         display: block;
         padding: 10px;
       }
+      paper-card{
+        width: 100%;
+        padding: 10px;
+      }
+      .center{
+        text-align: center;
+      }
+
+
     </style>
 
-      <h1>View Three</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quasi sequi facilis totam, iusto. Non soluta nesciunt eius voluptate itaque, tempora ullam, maiores odio unde recusandae nam deleniti ipsam, obcaecati.</p>
+      <h1 class="center">Here's What Happend Today!</h1>
+      <p class="center">keep a journal and let your posterity know you in the future!!</p>
+      <paper-card>
+        <div class="card-content">
+          <paper-input label="Title" style="width:40%"></paper-input>
+          <paper-input label="Date" style="width:40%"></paper-input>
+          <paper-textarea label="What's up?"></paper-textarea>
+        </div>
+        <div class="card-actions">
+          <paper-button raised><iron-icon icon="done"></iron-icon>Done</paper-button>
+          <paper-button raised><iron-icon icon="cancel"></iron-icon>cancel</paper-button>
+        </div>
+      </paper-card>
+
   </template>
+
+
+
 
   <script>
 
     Polymer({
 
-      is: 'my-view4'
+      is: 'my-journal-write'
 
     });
 
